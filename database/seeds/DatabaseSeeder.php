@@ -16,5 +16,9 @@ class DatabaseSeeder extends Seeder
 		
 		//$this->call('categoriasSeeder');
 
+		//$this->call('subcategoriasSeeders');
+		
+		$this->call('anunciosPublicadosSeeders');
+		
     }
 }

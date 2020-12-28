@@ -21,8 +21,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('categorias', 'CategoriasController@index');
-
-
+Route::post('articulospublicados', 'ArticulosPublicadosController@obtenerArticulos');
+//Route::get('articulospublicados', 'ArticulosPublicadosController@obtenerArticulos');
 /*
 
 

@@ -16,24 +16,30 @@ class CategoriasController extends Controller
           return categorias::all();
    }
    /*
-   Route::get('articles/{id}', function($id) {
-    return Article::find($id);
-});
+   public function show(Article $article)
+    {
+        return $article;
+    }
 
-Route::post('articles', function(Request $request) {
-    return Article::create($request->all);
-});
+    public function store(Request $request)
+    {
+        $article = Article::create($request->all());
 
-Route::put('articles/{id}', function(Request $request, $id) {
-    $article = Article::findOrFail($id);
-    $article->update($request->all());
+        return response()->json($article, 201);
+    }
 
-    return $article;
-});
+    public function update(Request $request, Article $article)
+    {
+        $article->update($request->all());
 
-Route::delete('articles/{id}', function($id) {
-    Article::find($id)->delete();
+        return response()->json($article, 200);
+    }
 
-    return 204;
-});*/
+    public function delete(Article $article)
+    {
+        $article->delete();
+
+        return response()->json(null, 204);
+    }
+   */
 }
